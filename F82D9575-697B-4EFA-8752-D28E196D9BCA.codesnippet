@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>csScreen</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>CGSize screenSize = [[UIScreen mainScreen] bounds].size;
+    if(screenSize.height == 480){
+        // iPhone Classic
+        &lt;#statements-if-iphone 3 and 4#&gt;
+    } else {
+        
+    }
+    if(screenSize.height == 568){
+        // iphone 5
+        &lt;#statements-if-iphone 5#&gt;
+
+    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>F82D9575-697B-4EFA-8752-D28E196D9BCA</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Screen size with condition</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
