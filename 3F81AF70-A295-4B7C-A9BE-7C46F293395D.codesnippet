@@ -3,21 +3,23 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>csPragma</string>
+	<string>csalbl</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>All</string>
+		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>#pragma mark -
-#pragma mark &lt;#markname#&gt;
-</string>
+	<string>UILabel *lbl&lt;#(name)#&gt;=[[UILabel alloc] initWithFrame:CGRectMake(&lt;#CGFloat x#&gt;, &lt;#CGFloat y#&gt;, &lt;#CGFloat width#&gt;, &lt;#CGFloat height#&gt;)];
+        lbl&lt;#(name)#&gt;.textAlignment=NSTextAlignmentCenter;
+        lbl&lt;#(name)#&gt;.textColor=[UIColor &lt;#(color)#&gt;];
+        lbl&lt;#(name)#&gt;.font=[UIFont systemFontOfSize:&lt;#(font size)#&gt;];
+[self addSubview:lbl&lt;#(name)#&gt;];</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>505C6FC3-E6E3-4EA4-8480-D9EEE969BC0F</string>
+	<string>3F81AF70-A295-4B7C-A9BE-7C46F293395D</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Pragma mark</string>
+	<string>Add Label</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

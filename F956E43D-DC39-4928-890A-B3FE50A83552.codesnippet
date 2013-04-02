@@ -3,21 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>csPragma</string>
+	<string>nscfn</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>All</string>
+		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>#pragma mark -
-#pragma mark &lt;#markname#&gt;
-</string>
+	<string>NSLog(@"%@ --- %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd));</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>505C6FC3-E6E3-4EA4-8480-D9EEE969BC0F</string>
+	<string>F956E43D-DC39-4928-890A-B3FE50A83552</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Pragma mark</string>
+	<string>NSLog calss and function name</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

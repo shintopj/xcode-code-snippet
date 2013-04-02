@@ -3,21 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>csPragma</string>
+	<string>csad</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>All</string>
+		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>#pragma mark -
-#pragma mark &lt;#markname#&gt;
-</string>
+	<string>AppDelegate *appDelegate=(AppDelegate *)[[UIApplication sharedApplication] delegate];</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>505C6FC3-E6E3-4EA4-8480-D9EEE969BC0F</string>
+	<string>6F523CE3-8A56-44CE-A4F6-F8F2DA4B96AB</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Pragma mark</string>
+	<string>App Delegate</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
