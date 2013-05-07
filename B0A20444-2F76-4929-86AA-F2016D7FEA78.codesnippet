@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>csTouch</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#pragma mark -
+#pragma mark Touch handling
+
+-(void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    UITouch *touch = [[event allTouches] anyObject];
+    
+//	CGPoint location = [touch locationInView:[touch view]];
+    
+//    if ([touch view] == &lt;#view name#&gt;￼￼ ) {
+//        ￼￼&lt;#statements#&gt;;
+//    }
+    
+}
+
+/*
+-(void) touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
+    UITouch *touch = [[event allTouches] anyObject];
+    
+//	CGPoint location = [touch locationInView:[touch view]];
+
+//    if ([touch view] ==&lt;#view name#&gt; ￼ ) {
+//        ￼&lt;#statements#&gt;;
+//    }
+
+}
+*/
+
+/*
+-(void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
+    UITouch *touch = [[event allTouches] anyObject];
+    
+//	CGPoint location = [touch locationInView:[touch view]];
+
+//    if ([touch view] == &lt;#view name#&gt;￼ ) {
+//        ￼&lt;#statements#&gt;;
+//    }
+    
+}
+*/
+
+/*
+-(void) touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event{
+    UITouch *touch = [[event allTouches] anyObject];
+    
+
+//	CGPoint location = [touch locationInView:[touch view]];
+
+//    if ([touch view] == &lt;#view name#&gt;￼ ) {
+//        ￼￼;
+//    }
+    
+}
+*/
+
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>B0A20444-2F76-4929-86AA-F2016D7FEA78</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C-Plus-Plus</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Touch Handling</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
