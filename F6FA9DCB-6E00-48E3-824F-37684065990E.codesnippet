@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>csAngular</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>  // get time &amp; angular speed at finger
+        float previousAngle = atan2f([touch previousLocationInView:self].y - centerPoint.y, [touch previousLocationInView:self].x - centerPoint.x);
+        float currentAngle = atan2f([touch locationInView:self].y - centerPoint.y, [touch locationInView:self].x - centerPoint.x);
+        angularVelocity = (currentAngle - previousAngle)/(touch.timestamp - previousTime);</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>F6FA9DCB-6E00-48E3-824F-37684065990E</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Calculate touch angle and angular velocity</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

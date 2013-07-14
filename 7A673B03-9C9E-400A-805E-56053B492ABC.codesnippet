@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>csSearchBar</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#pragma mark -
+#pragma mark Search Display Controller
+
+#pragma mark -
+#pragma mark Content Filtering
+
+- (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
+{
+	/*
+	 Update the filtered array based on the search text and scope.
+	 */
+	
+	[searchResultArray removeAllObjects]; // First clear the filtered array.
+	
+	/*
+	 Search the main list for products whose type matches the scope (if selected) and whose name matches searchText; add items that match to the filtered array.
+	 */
+    
+	for (id product in listItemsArray)
+	{
+        NSRange titleResultsRange = [[product name] rangeOfString:searchText options:NSCaseInsensitiveSearch];
+        if (titleResultsRange.length &gt; 0)
+			[searchResultArray addObject:product];
+        else{
+            
+            NSRange titleResultsRange = [[product categoryName] rangeOfString:searchText options:NSCaseInsensitiveSearch];
+            if (titleResultsRange.length &gt; 0)
+                [searchResultArray addObject:product];
+        }
+	}
+}
+
+
+#pragma mark -
+#pragma mark UISearchDisplayController Delegate Methods
+
+- (void) searchDisplayControllerWillBeginSearch:(UISearchDisplayController *)controller{
+    
+}
+
+- (void) searchDisplayControllerDidBeginSearch:(UISearchDisplayController *)controller{
+    
+    currentTableView=self.searchDisplayController.searchResultsTableView;
+    
+//    [self.searchDisplayController.searchResultsTableView registerNib:[UINib nibWithNibName:@"&lt;#Custom Cell#&gt;" bundle:nil] forCellReuseIdentifier:@"&lt;#Custom Cell#&gt;"];
+//    self.searchDisplayController.searchResultsTableView.separatorStyle=UITableViewCellSeparatorStyleNone;
+//    self.searchDisplayController.searchResultsTableView.backgroundColor =[UIColor colorWithPatternImage:[UIImage imageNamed:@"Background"]];
+}
+
+
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
+{
+    
+    
+    [self filterContentForSearchText:searchString scope:
+     [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex]]];
+    
+    // Return YES to cause the search result table view to be reloaded.
+    return YES;
+}
+
+
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchScope:(NSInteger)searchOption
+{
+ //   [self filterContentForSearchText:[self.searchDisplayController.searchBar text] scope:
+  //   [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:searchOption]];
+    
+    
+    _searchBar.text=@"";
+    
+    NSString *scope=[[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:searchOption];
+    
+    if ([scope isEqualToString:@"scope"]) {
+        // do somthing
+    }
+    
+    // Return YES to cause the search result table view to be reloaded.    
+    return YES;
+}
+
+
+
+- (void) searchDisplayControllerDidEndSearch:(UISearchDisplayController *)controller{
+    currentTableView=_contentTableView;
+  //  [_contentTableView setContentOffset:CGPointMake(0, 44) animated:YES];
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>7A673B03-9C9E-400A-805E-56053B492ABC</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Search display controller delegate</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

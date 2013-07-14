@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>csScale</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    CGFloat scale=1.0;
+    if([[UIScreen mainScreen] respondsToSelector: NSSelectorFromString(@"scale")]){
+        if([self respondsToSelector: NSSelectorFromString(@"contentScaleFactor")]){
+            scale = [[UIScreen mainScreen] scale];
+        }
+    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>82D284F0-AA78-43B0-B6E1-796C3B62B277</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Main Screen scale</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

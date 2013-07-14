@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>csRadius</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (float) getRadiusFromCenterTo:(CGPoint)point
+{
+    CGPoint center = CGPointMake(self.bounds.size.width/2, self.bounds.size.height/2);
+    float distance = sqrtf(powf((center.y - point.y), 2) + powf((center.x - point.x), 2));
+    return distance;
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>263D2FDB-7151-4D8A-8F3A-F941EDF7B3BF</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Get Radius from center</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

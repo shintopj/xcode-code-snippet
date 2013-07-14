@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>csThumbImageIO</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#pragma mark -
+#pragma mark thumbnail (Image IO)
+
+
+CGImageRef MyCreateThumbnailImageFromData (NSData * data, int imageSize)
+{
+    CGImageRef        myThumbnailImage = NULL;
+    CGImageSourceRef  myImageSource;
+    CFDictionaryRef   myOptions = NULL;
+    CFStringRef       myKeys[3];
+    CFTypeRef         myValues[3];
+    CFNumberRef       thumbnailSize;
+    
+    // Create an image source from NSData; no options.
+    myImageSource = CGImageSourceCreateWithData((CFDataRef)data,
+                                                NULL);
+    // Make sure the image source exists before continuing.
+    if (myImageSource == NULL){
+        fprintf(stderr, "Image source is NULL.");
+        return  NULL;
+    }
+    
+    // Package the integer as a  CFNumber object. Using CFTypes allows you
+    // to more easily create the options dictionary later.
+    thumbnailSize = CFNumberCreate(NULL, kCFNumberIntType, &amp;imageSize);
+    
+    //
+    
+    // Set up the thumbnail options.
+    myKeys[0] = kCGImageSourceCreateThumbnailWithTransform;
+    myValues[0] = (CFTypeRef)kCFBooleanTrue;
+    myKeys[1] = kCGImageSourceCreateThumbnailFromImageIfAbsent;
+    myValues[1] = (CFTypeRef)kCFBooleanTrue;
+    myKeys[2] = kCGImageSourceThumbnailMaxPixelSize;
+    myValues[2] = (CFTypeRef)thumbnailSize;
+    
+    myOptions = CFDictionaryCreate(NULL, (const void **) myKeys,
+                                   (const void **) myValues, 2,
+                                   &amp;kCFTypeDictionaryKeyCallBacks,
+                                   &amp; kCFTypeDictionaryValueCallBacks);
+    
+    // Create the thumbnail image using the specified options.
+    myThumbnailImage = CGImageSourceCreateThumbnailAtIndex(myImageSource,
+                                                           0,
+                                                           myOptions);
+    // Release the options dictionary and the image source
+    // when you no longer need them.
+    CFRelease(thumbnailSize);
+    CFRelease(myOptions);
+    CFRelease(myImageSource);
+    
+    // Make sure the thumbnail image exists before continuing.
+    if (myThumbnailImage == NULL){
+        fprintf(stderr, "Thumbnail image not created from image source.");
+        return NULL;
+    }
+    
+    return myThumbnailImage;
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>75796EB3-3EC5-414E-A9E4-546F2AFCD14B</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>get thumbnail (Image IO)</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

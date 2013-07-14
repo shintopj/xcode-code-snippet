@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>csCDDist</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>  NSEntityDescription *entity = [NSEntityDescription
+                                   entityForName:@"&lt;#Object Name#&gt;" inManagedObjectContext:context];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    
+    [fetchRequest setEntity:entity];
+    [fetchRequest setResultType:NSDictionaryResultType];
+    [fetchRequest setReturnsDistinctResults:YES];
+    
+//    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"mainCategory ==[c] %@ AND isActive==1", CATEGORY_DINE];
+//    [fetchRequest setPredicate:predicate];
+
+    [fetchRequest setPropertiesToFetch:[NSArray arrayWithObject:@"&lt;#field name#&gt;"]];
+    
+    
+    // Execute the fetch
+    NSError *error;
+    NSArray *array=[context executeFetchRequest:fetchRequest error:&amp;error];
+    [fetchRequest release];
+    
+    
+//    NSMutableArray *categoryarray=[[NSMutableArray alloc] init];
+//    for( NSDictionary* obj in array ) {
+//        CategoryObject *catObj =[[CategoryObject alloc] init];
+//        catObj.categoryName=[obj objectForKey:@"&lt;#field name#&gt;"];
+//        catObj.mainCategoryName=CATEGORY_DINE;
+//        [categoryarray addObject:catObj];
+//        [catObj release];
+//    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>BEDC31FF-69B4-4942-BC5B-7D11B7B2E157</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Core Data get Distinct</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
